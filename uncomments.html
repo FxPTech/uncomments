@@ -22,7 +22,7 @@
 
 <script>
 
- function getCategoryID(category) {
+ /*function getCategoryID(category) {
             var forums = new Map();
 
             forums.set("דיון, עזרה וייעוץ", '10');
@@ -63,13 +63,14 @@
             } else {
                 return "-1";
             }
-        }
+        }*/
 
 function checkUncommented() {
 
-    let catName = document.getElementById("category-name").value;
+    //let catName = document.getElementById("category-name").value;
 
-    var proxyUrl = "https://jsonp.afeld.me/?url=" + encodeURIComponent("https://www.fxp.co.il/forumdisplay.php?f=" + getCategoryID(catName));
+    //var proxyUrl = "https://jsonp.afeld.me/?url=" + encodeURIComponent("https://www.fxp.co.il/forumdisplay.php?f=" + getCategoryID(catName));
+    var proxyUrl = "https://jsonp.afeld.me/?url=" + encodeURIComponent("https://www.fxp.co.il/forumdisplay.php?f=3821");
 
     var req = new XMLHttpRequest();
 
@@ -100,7 +101,7 @@ function checkUncommented() {
         	bbcode += "\n[B][SIZE=4]" +name+ "[/SIZE][/B]\n";
 
 
-            proxyUrl = "https://jsonp.afeld.me/?url=" + encodeURIComponent("https://www.fxp.co.il/" + url + "&&pp=200&&daysprune=7");
+            proxyUrl = "https://jsonp.afeld.me/?url=" + encodeURIComponent("https://www.fxp.co.il/" + url + "&&pp=200&&daysprune=1");
 
             req = new XMLHttpRequest();
 
